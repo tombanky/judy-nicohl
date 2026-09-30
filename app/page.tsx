@@ -1,69 +1,128 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between bg-white px-8 py-5 shadow-sm">
+        <div className="flex items-center gap-3">
+  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-xl font-bold text-white">
+    H
+  </div>
+
+  <span className="text-2xl font-bold tracking-tight text-slate-900">
+    Hulton Bank
+  </span>
+</div>
+        <div className="flex items-center gap-3">
+          <a
+            href="/login"
+            className="rounded-lg border border-slate-300 px-5 py-2 font-medium text-slate-700 transition hover:bg-slate-100"
+          >
+            Sign In
+          </a>
+          <button className="rounded-lg bg-blue-700 px-5 py-2 font-medium text-white transition hover:bg-blue-800">
+            Open an Account
+          </button>
+        </div>
+      </nav>
+      {/* Hero */}
+<section className="relative overflow-hidden bg-slate-950">
+  <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-600 opacity-30 blur-3xl"></div>
+  <div className="absolute -bottom-40 left-1/3 h-96 w-96 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+  <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-16 px-8 py-24 lg:flex-row lg:py-28">
+    {/* Hero Text */}
+    <div className="max-w-3xl flex-1">
+      <p className="mb-5 font-semibold tracking-widest text-blue-400">
+        SIMPLE. SECURE. MODERN.
+      </p>
+      <h1 className="text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl">
+        Banking built around your everyday life.
+      </h1>
+      <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        Manage your checking and savings accounts, move money, view
+        transactions, and stay in control of your finances from one place.
+      </p>
+      <div className="mt-9 flex gap-4">
+        <button className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500">
+          Get Started
+        </button>
+        <button className="rounded-lg border border-slate-600 px-6 py-3 font-semibold text-white transition hover:bg-slate-800">
+          Learn More
+        </button>
+      </div>
+    </div>
+    {/* Bank Card */}
+    <div className="w-full max-w-md flex-1">
+      <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-blue-700 to-slate-900 p-7 shadow-2xl">
+        <div className="flex items-center justify-between">
+          <span className="text-xl font-bold text-white">
+            Hulton Bank
+          </span>
+          <span className="text-sm text-blue-200">
+            VISA
+          </span>
+        </div>
+        <div className="mt-12">
+          <p className="text-sm text-blue-200">
+            Available Balance
+          </p>
+          <p className="mt-2 text-4xl font-bold text-white">
+            $24,850.00
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-10 flex items-end justify-between">
+          <div>
+            <p className="text-xs text-blue-200">
+              CARD NUMBER
+            </p>
+            <p className="mt-1 tracking-widest text-white">
+              •••• •••• •••• 4821
+            </p>
+          </div>
+          <div className="h-10 w-14 rounded-md border border-white/30 bg-white/10"></div>
         </div>
-      </main>
+      </div>
+      <div className="mt-5 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm text-slate-300">
+              Recent activity
+            </p>
+            <p className="mt-1 font-semibold text-white">
+              Everyday Checking
+            </p>
+          </div>
+          <span className="text-sm font-semibold text-green-400">
+            Active
+          </span>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+      {/* Features */}
+      <section className="mx-auto grid max-w-6xl gap-6 px-8 py-20 md:grid-cols-3">
+        <div className="rounded-2xl bg-white p-7 shadow-sm transition hover:shadow-md">
+          <div className="mb-5 text-3xl">💳</div>
+          <h2 className="text-xl font-bold">Checking</h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            Everyday banking for spending, deposits, and transfers.
+          </p>
+        </div>
+        <div className="rounded-2xl bg-white p-7 shadow-sm transition hover:shadow-md">
+          <div className="mb-5 text-3xl">💰</div>
+          <h2 className="text-xl font-bold">Savings</h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            Keep your savings organized and easy to manage.
+          </p>
+        </div>
+        <div className="rounded-2xl bg-white p-7 shadow-sm transition hover:shadow-md">
+          <div className="mb-5 text-3xl">↔️</div>
+          <h2 className="text-xl font-bold">Transfers</h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            Send and receive money with a simple banking experience.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
