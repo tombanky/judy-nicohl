@@ -10,7 +10,7 @@ export default function LoginPage() {
     e.preventDefault();
     const savedPassword =
       localStorage.getItem("hulton_password") || "judynicohls675";
-    if (username === "judynicohls" && password === savedPassword) {
+    if (username === "JudyNichols" && password === savedPassword) {
       router.push("/dashboard");
       return;
     }
